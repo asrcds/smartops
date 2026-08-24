@@ -1,0 +1,47 @@
+// 基础颜色变量
+$primary-color: #1677ff;
+
+$bg-dark: #0f0f1f;
+$bg-light: #f5f7fa;
+
+$text-dark: #1c1c28;
+$text-light: #ffffff;
+
+$border-radius: 6px;
+$box-shadow: 0 2px 8px 0 rgba(16, 30, 54, 0.08);
+
+// 主题变量
+:root,
+.body-light {
+  --primary-color: #1677ff;
+
+  --bg-color: #f5f7fa;
+  --surface-color: #ffffff;
+  --text-color: #1c1c28;
+  --text-secondary-color: #555a69;
+  --border-color: #e6e8ec;
+  --border-radius: 6px;
+  --box-shadow: 0 2px 8px 0 rgba(16, 30, 54, 0.08);
+
+  --link-color: #1677ff;
+  --link-hover-color: #185ad6;
+}
+
+// 暗色主题
+.body-dark {
+  --primary-color: #1677ff;
+
+  --bg-color: #0f0f1f;
+  --surface-color: #191933;
+  --text-color: #f5f7fa;
+  --text-secondary-color: #b0b6cb;
+  --border-color: #232346;
+  --border-radius: 6px;
+  --box-shadow: 0 2px 8px 0 rgba(22, 41, 113, 0.18);
+
+  --link-color: #76a7ff;
+  --link-hover-color: #a6c8ff;
+}
+
+// SCSS 变量到 CSS 变量映射建议
+// 组件中可用：color: var(--text-color); background: var(--bg-color);

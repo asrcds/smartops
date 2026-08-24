@@ -1,0 +1,136 @@
+/** 全局样式 **/
+@import './variables.scss';
+
+/* 1. 全局盒模型和字体设置 */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+  -webkit-tap-highlight-color: transparent;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  font-family: inherit;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* 2. 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* 3. 布局样式 */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color);
+}
+
+.main-container {
+  flex: 1 1 auto;
+  padding: 24px;
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 24px;
+  transition: background 0.3s;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 12px;
+    margin: 8px;
+    border-radius: 0;
+  }
+}
+
+/* 4. 过渡动画 */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s;
+}
+.slide-enter-from, .slide-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* 5. Element Plus 组件主题覆盖（可选） */
+.el-button {
+  border-radius: var(--border-radius) !important;
+  font-weight: 500;
+}
+
+.el-input,
+.el-select,
+.el-textarea {
+  border-radius: var(--border-radius) !important;
+}
+
+.el-dialog {
+  border-radius: calc(var(--border-radius) * 2) !important;
+  box-shadow: var(--box-shadow) !important;
+  background: var(--surface-color) !important;
+  color: var(--text-color) !important;
+}
+
+.el-message-box {
+  border-radius: var(--border-radius) !important;
+}
+
+/* 链接样式 */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* 禁止拖拽选择的类 */
+.no-select {
+  user-select: none;
+}
+
+/* 禁止拖图标 */
+img, svg {
+  -webkit-user-drag: none;
+}
+
+/* 代码块美化 */
+pre, code {
+  font-family: 'Fira Mono', monospace;
+  background: #232346;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
