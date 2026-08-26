@@ -29,7 +29,7 @@
 
 
 ## 📁 系统架构
-
+![系统架构图](frontend/architecture.png){width=80%}
 
 
 ## 🚀 核心功能
